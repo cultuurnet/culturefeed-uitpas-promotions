@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function culturefeed_uitpas_promotions_menu() {
+  $items['admin/config/culturefeed/uitpas/uitpas-promotions'] = array(
+    'title' => t('UiTPAS promotions search'),
+    'description' => t('Change settings for UiTPAS promotions search'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('culturefeed_uitpas_promotions_admin_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'culturefeed_uitpas_promotions.admin.inc',
+  );
+
+  $items['uitpas/voordelen'] = array(
+    'title' => t('Search UiTPAS promotions'),
+    'description' => t('Search for UiTPAS promotions and advantages'),
+    'page callback' => 'culturefeed_uitpas_promotions_search_page',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file' => 'culturefeed_uitpas_promotions.pages.inc'
+  );
+
+  return $items;
+}
