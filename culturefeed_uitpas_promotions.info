@@ -1,0 +1,6 @@
+name = Culturefeed UiTPAS Promotions
+description = Module for searching through UiTPAS promotions and advantages.
+core = 7.x
+dependencies[] = culturefeed_uitpas
+configure = admin/config/culturefeed/uitpas/uitpas-promotions
+
