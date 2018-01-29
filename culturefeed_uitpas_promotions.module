@@ -24,3 +24,26 @@ function culturefeed_uitpas_promotions_menu() {
 
   return $items;
 }
+
+/**
+ * Implements hook_theme().
+ */
+function culturefeed_uitpas_promotions_theme() {
+  return array(
+    'culturefeed_uitpas_promotions_search' => array(
+      'variables' => array(
+        'url_uitpas' => '',
+        'url_uitdatabank' => '',
+        'fuzzy_search' => true,
+        'placeholder' => '',
+        'filter_cardsystem' => true,
+        'card_systems' => array(),
+        'last_chance' => 2,
+        'spotlight' => true
+      ),
+      'path' => drupal_get_path('module', 'culturefeed_uitpas_promotions') . '/theme',
+      'file' => 'theme.inc',
+      'template' => 'culturefeed-uitpas-promotions-search'
+    ),
+  );
+}
