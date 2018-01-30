@@ -13,10 +13,9 @@ function culturefeed_uitpas_promotions_menu() {
     'file' => 'culturefeed_uitpas_promotions.admin.inc',
   );
 
-  $items['uitpas/voordelen'] = array(
+  $items['uitpas/search/promotions'] = array(
     'title' => t('Search UiTPAS promotions'),
-    'description' => t('Search for UiTPAS promotions and advantages'),
-    'page callback' => 'culturefeed_uitpas_promotions_search_page',
+    'page callback' => 'culturefeed_uitpas_promotions_search',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
     'file' => 'culturefeed_uitpas_promotions.pages.inc'
@@ -32,18 +31,17 @@ function culturefeed_uitpas_promotions_theme() {
   return array(
     'culturefeed_uitpas_promotions_search' => array(
       'variables' => array(
-        'url_uitpas' => '',
-        'url_uitdatabank' => '',
-        'fuzzy_search' => true,
-        'placeholder' => '',
-        'filter_cardsystem' => true,
-        'card_systems' => array(),
-        'last_chance' => 2,
-        'spotlight' => true
+        'url_uitpas' => NULL,
+        'url_uitdatabank' => NULL,
+        'fuzzy_search' => NULL,
+        'placeholder' => NULL,
+        'filter_cardsystem' => NULL,
+        'card_systems' => NULL,
+        'last_chance' => NULL,
+        'spotlight' => NULL
       ),
-      'path' => drupal_get_path('module', 'culturefeed_uitpas_promotions') . '/theme',
-      'file' => 'theme.inc',
-      'template' => 'culturefeed-uitpas-promotions-search'
+      'template' => 'theme/culturefeed-uitpas-promotions-search',
+      'file' => 'theme/theme.inc'
     ),
   );
 }
