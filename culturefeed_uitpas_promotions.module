@@ -13,9 +13,21 @@ function culturefeed_uitpas_promotions_menu() {
     'file' => 'culturefeed_uitpas_promotions.admin.inc',
   );
 
-  $items['uitpas/search/promotions'] = array(
+  $items['promotions'] = array(
     'title' => t('Search UiTPAS promotions'),
+    'title callback' => '',
     'page callback' => 'culturefeed_uitpas_promotions_search',
+    'page arguments' => array(),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file' => 'culturefeed_uitpas_promotions.pages.inc'
+  );
+
+  $items['culturefeed/profile/uitpas/promotions'] = array(
+    'title' => t('Search my UiTPAS promotions'),
+    'title callback' => '',
+    'page callback' => 'culturefeed_uitpas_promotions_profile_search',
+    'page arguments' => array(),
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
     'file' => 'culturefeed_uitpas_promotions.pages.inc'
