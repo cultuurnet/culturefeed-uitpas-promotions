@@ -21,7 +21,7 @@ function culturefeed_uitpas_promotions_admin_settings() {
     '#type' => 'checkbox',
     '#title' => t('Wildcard Search'),
     '#description' => t('Wildcard based search of promotions, organizers and cities. When active, results for example "sta" will return "stadswinkel", "standaard" etc.'),
-    '#default_value' => variable_get('culturefeed_uitpas_promotions_wildcard_search', 1)
+    '#default_value' => variable_get('culturefeed_uitpas_promotions_wildcard_search', true)
   );
 
   $form['culturefeed_uitpas_promotions_placeholder_search_field'] = array(
@@ -33,7 +33,7 @@ function culturefeed_uitpas_promotions_admin_settings() {
   $form['culturefeed_uitpas_promotions_show_filter_on_map'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show filter on map'),
-    '#default_value' => variable_get('culturefeed_uitpas_promotions_show_filter_on_map', 1),
+    '#default_value' => variable_get('culturefeed_uitpas_promotions_show_filter_on_map', true),
   );
 
   $card_system_ids = array();
@@ -62,7 +62,7 @@ function culturefeed_uitpas_promotions_admin_settings() {
     '#type' => 'checkbox',
     '#title' => t('Highlight promotions'),
     '#description' => t('Display highlighted promotions higher in the ranking (only when sorted on "Most recent").'),
-    '#default_value' => variable_get('culturefeed_uitpas_promotions_highlight', 0),
+    '#default_value' => variable_get('culturefeed_uitpas_promotions_highlight', false),
   );
 
   return system_settings_form($form);
