@@ -1,5 +1,7 @@
 <div id="uitpas-search"
-     data-card-systems-checked="<?php print $card_systems_string; ?>"
+     <?php if ($card_systems_string): ?>
+        data-card-systems-checked="<?php print $card_systems_string; ?>"
+     <?php endif; ?>
      data-card-systems-visible="<?php print $filter_cardsystem; ?>"
      data-elastic-search-url="<?php print $url_uitpas; ?>"
      data-fuzzy-search="<?php print $fuzzy_search; ?>"
