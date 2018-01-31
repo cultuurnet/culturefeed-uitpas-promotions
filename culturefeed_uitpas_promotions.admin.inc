@@ -32,7 +32,7 @@ function culturefeed_uitpas_promotions_admin_settings() {
 
   $form['culturefeed_uitpas_promotions_show_filter_on_map'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Show filter on map'),
+    '#title' => t('Show cardsystem filter'),
     '#default_value' => variable_get('culturefeed_uitpas_promotions_show_filter_on_map', true),
   );
 
