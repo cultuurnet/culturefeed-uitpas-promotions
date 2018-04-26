@@ -11,6 +11,12 @@ function culturefeed_uitpas_promotions_admin_settings() {
     '#default_value' => variable_get('culturefeed_uitpas_promotions_url', ''),
   );
 
+  $form['culturefeed_uitpas_promotions_key'] = array(
+    '#type' => 'textfield',
+    '#title' => t('URL UiTPAS promotions key'),
+    '#default_value' => variable_get('culturefeed_uitpas_promotions_key', ''),
+  );
+
   $form['culturefeed_uitpas_promotions_uitdatabank_url'] = array(
     '#type' => 'textfield',
     '#title' => t('URL UiTdatabank API'),

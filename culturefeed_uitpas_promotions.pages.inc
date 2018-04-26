@@ -15,7 +15,7 @@ function culturefeed_uitpas_promotions_search() {
       )
     ),
     '#theme' => 'culturefeed_uitpas_promotions_search',
-    '#url_uitpas' => $setting_variables['url_uitpas'],
+    '#url_uitpas' => $setting_variables['url_uitpas'] . $setting_variables['key_uitpas'] . '/',
     '#url_uitdatabank' => $setting_variables['url_uitdatabank'],
     '#fuzzy_search' => $setting_variables['fuzzy_search'],
     '#placeholder' => $setting_variables['placeholder'],
@@ -48,7 +48,7 @@ function culturefeed_uitpas_promotions_profile_search() {
       )
     ),
     '#theme' => 'culturefeed_uitpas_promotions_search',
-    '#url_uitpas' => $setting_variables['url_uitpas'],
+    '#url_uitpas' => $setting_variables['url_uitpas'] . $setting_variables['key_uitpas'] . '/',
     '#url_uitdatabank' => $setting_variables['url_uitdatabank'],
     '#fuzzy_search' => $setting_variables['fuzzy_search'],
     '#placeholder' => $setting_variables['placeholder'],
@@ -63,6 +63,7 @@ function _culturefeed_uitpas_promotions_get_setting_variables() {
   $setting_variables = array();
 
   $setting_variables['url_uitpas'] = variable_get('culturefeed_uitpas_promotions_url', '');
+  $setting_variables['key_uitpas'] = variable_get('culturefeed_uitpas_promotions_key', '');
   $setting_variables['url_uitdatabank'] = variable_get('culturefeed_uitpas_promotions_uitdatabank_url', '');
   $setting_variables['fuzzy_search'] = variable_get('culturefeed_uitpas_promotions_wildcard_search', 1);
   $setting_variables['placeholder'] = variable_get('culturefeed_uitpas_promotions_placeholder_search_field', t('Name promotion, organizer or city'));
