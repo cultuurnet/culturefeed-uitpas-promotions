@@ -16,6 +16,6 @@ function culturefeed_uitpas_promotions_preprocess_culturefeed_uitpas_promotions_
     $variables['card_systems_string'] = '';
   }
 
-  $variables['jsscript'] = $base_url . '/' . drupal_get_path('module', 'culturefeed_uitpas_promotions') . '/react/static/js/main.31c38f2d.js';
+  $variables['jsscript'] = $base_url . '/' . drupal_get_path('module', 'culturefeed_uitpas_promotions') . '/react/static/js/main.8ff2cf34.js';
   $variables['thumb'] = $base_url . '/' . drupal_get_path('module', 'culturefeed_uitpas_promotions') . '/react/img/default-thumb.png';
 }
