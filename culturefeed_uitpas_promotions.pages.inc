@@ -10,7 +10,7 @@ function culturefeed_uitpas_promotions_search() {
   return array(
     '#attached' => array(
       'css' => array(
-        drupal_get_path('module', 'culturefeed_uitpas_promotions') . '/react/static/css/main.27b775e4.css',
+        drupal_get_path('module', 'culturefeed_uitpas_promotions') . '/react/static/css/main.41541177.css',
         'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700',
       )
     ),
@@ -43,7 +43,7 @@ function culturefeed_uitpas_promotions_profile_search() {
   return array(
     '#attached' => array(
       'css' => array(
-        drupal_get_path('module', 'culturefeed_uitpas_promotions') . '/react/static/css/main.27b775e4.css',
+        drupal_get_path('module', 'culturefeed_uitpas_promotions') . '/react/static/css/main.41541177.css',
         'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700',
       )
     ),
